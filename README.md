@@ -22,4 +22,22 @@ fastqc sub_mp_2.fastq
 mkdir multiqc  
 multiqc -o multiqc fastqc  
 ### общая статистика исходных чтений
+![image](https://user-images.githubusercontent.com/60805733/138952241-208549c6-83a4-451d-8894-9b3a635d97e6.png)
+![image](https://user-images.githubusercontent.com/60805733/138952335-61e21339-337a-4f82-8e7e-cc936ae732d5.png)
+![image](https://user-images.githubusercontent.com/60805733/138952365-6e3c2423-7877-4a3c-ac6a-ba4d09268709.png)
+![image](https://user-images.githubusercontent.com/60805733/138952411-944832ca-dca3-49fa-93d9-9014591ae69e.png)
+### С помощью программ platanus_trim и platanus_internal_trim подрезать чтения по качеству и удалить праймеры
+platanus_trim sub_p_1.fastq sub_p_2.fastq  
+platanus_internal_trim sub_mp_1.fastq sub_mp_2.fastq  
+### удаляем исходники
+rm sub_p_1.fastq  
+rm sub_p_2.fastq  
+rm sub_mp_1.fastq  
+rm sub_mp_2.fastq 
+### С помощью программы fastQC и multiQC оценить качество подрезанных чтений и получить по ним общую статистику
+mkdir trimmed_fq
+ls sub* | xargs -tI{} fastqc -o trimmed_fq {}
+mkdir multiqc_trimmed
+multiqc -o multiqc_trimmed trimmed_fq
+### общая статистика обрезанных чтений
 
