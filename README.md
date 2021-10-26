@@ -40,4 +40,8 @@ ls sub* | xargs -tI{} fastqc -o trimmed_fq {}
 mkdir multiqc_trimmed
 multiqc -o multiqc_trimmed trimmed_fq
 ### общая статистика обрезанных чтений
-
+![image](https://user-images.githubusercontent.com/60805733/138956270-35829c17-d77e-4723-a6db-d6f3397f31ce.png)
+![image](https://user-images.githubusercontent.com/60805733/138956306-2c147ded-3400-44a0-8617-c11a9ab4d788.png)
+![image](https://user-images.githubusercontent.com/60805733/138956385-83e23f97-7a17-4e17-9819-1aa20af7abca.png)
+![image](https://user-images.githubusercontent.com/60805733/138956423-263d3e9c-7cf4-447c-9a6c-2e7c0eeb7cfe.png)
+![image](https://user-images.githubusercontent.com/60805733/138956466-12cf30d4-ee4d-48a7-b67e-9296f49a531c.png)
