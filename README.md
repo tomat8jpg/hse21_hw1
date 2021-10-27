@@ -55,6 +55,6 @@ platanus scaffold -o Poil -t 1 -c Poil_contig.fa -IP2 sub_p_1.fastq.trimmed sub_
 platanus gap_close -o Poil -t 2 -c Poil_scaffold.fa -IP1 sub_p_1.fastq.trimmed sub_p_2.fastq.trimmed -OP2 sub_mp_1.fastq.int_trimmed sub_mp_2.fastq.int_trimmed 2> gapclose.log
 ### Анализ контигов и скаффолдов
 Ноутбук прикрепила в репозитории
-### самый длинный скаффолд (сервер ложится)
+### самый длинный скаффолд 
 echo scaffold4_len383582_cov234> a.txt
 seqtk subseq Poil_scaffold.fa a.txt > longest_scaffold.fasta
